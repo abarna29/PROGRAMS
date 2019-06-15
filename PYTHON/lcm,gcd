@@ -1,0 +1,40 @@
+9.Program to check whether given Integer is whether integer is power of 2 or not
+a=int(input())
+if(a<=0):
+	print(a,"is not a power of 2")
+elif(a&(a-1)):
+	print(a,"is a power of 2")
+else:
+	print(a,"is not a power of 2")
+	
+                  ********
+		  
+10.Program to find GCD of given numbers
+def gcd(a,b):
+	if(b==0):
+		return a
+	else:
+		return gcd(b,a%b)
+a=int(input())
+b=int(input())
+GCD=gcd(a,b)
+print(GCD)
+            
+	       *******
+
+11.Program to find LCM of given numbers
+def lcm(num1,num2):
+	if(num1>num2):
+	    greater=num1
+	else:
+	    greater=num2
+	while(True):
+	    if(greater%num1==0 and greater%num2==0):
+	        lcm=greater
+	        break
+	    greater=greater+1
+	return lcm
+num1=int(input())
+num2=int(input())
+LCM=lcm(num1,num2)
+print(LCM)
