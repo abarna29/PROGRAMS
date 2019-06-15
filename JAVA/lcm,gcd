@@ -1,0 +1,30 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+class GFG 
+{
+    static int gcd(int a,int b)
+    {
+        if(a==0)
+        return b;
+        return gcd(b%a,a);
+    }
+    static int lcm(int a,int b)
+    {
+        return (a*b)/gcd(a,b);
+    }
+	public static void main (String[] args)
+	{
+	    Scanner in=new Scanner(System.in);
+	    int a=in.nextInt();
+	    int b=in.nextInt();
+	    System.out.println(lcm(a,b));
+	    System.out.println(gcd(a,b));
+	}
+}
+Sample input:
+15
+20
+Sample output:
+60
+5
