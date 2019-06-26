@@ -1,0 +1,12 @@
+n=int(input())
+a=int(input())
+b=int(input())
+p=1
+val=0
+while(n>p):
+    r=(n//p)%10
+    if r==a:
+        r=b
+    val=r*p+val
+    p*=10
+print(n,val)
