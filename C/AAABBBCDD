@@ -17,3 +17,49 @@ int main()
     }
 	return 0;
 }
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int main() {
+	int n,len;
+	scanf("%d",&n);
+	char a[1000];
+	scanf("%s",a);
+	len=strlen(a);
+	char a1[1000];
+	int a2[1000];
+	int front=-1,rear=-1;
+	a1[++rear]=a[0];
+	a2[rear]=1;
+	for(int i=1;i<len;i++)
+	{
+	    if(a[i]==a1[rear])
+	    {
+	        a2[rear]++;
+	    }
+	    else
+	    {
+	        a1[++rear]=a[i];
+	        a2[rear]=1;
+	    }
+	}
+	while(front!=rear)
+	{
+	    ++front;
+	    printf("%c%d",a1[front],a2[front]);
+	}
+	return 0;
+}
+INPUT:
+aaacccfffhj
+
+OUTPUT:
+a3c3f3h1j1
